@@ -156,9 +156,9 @@
 
 			user.visible_message("<span class='danger'>[user] opens \the [bomb] on \his [src.name] and fires a blast wave at \the [A]!</span>","<span class='danger'>You open \the [bomb] on your [src.name] and fire a blast wave at \the [A]!</span>")
 
-			heavy_damage_range = round(range*0.25)
-			medium_damage_range = round(range*0.5)
-			light_damage_range = round(range)
+			heavy_damage_range = round(range*0.375)
+			medium_damage_range = round(range*0.75)
+			light_damage_range = round(range*1.5)
 
 			if(ismob(src.loc))
 				var/mob/shooter = src.loc
@@ -175,7 +175,7 @@
 
 			for(var/obj/machinery/computer/bhangmeter/bhangmeter in doppler_arrays)
 				if(bhangmeter)
-					bhangmeter.sense_explosion(epicenter.x,epicenter.y,epicenter.z,round(uncapped*0.25), round(uncapped*0.5), round(uncapped),"???", cap)
+					bhangmeter.sense_explosion(epicenter.x,epicenter.y,epicenter.z,round(uncapped*0.375), round(uncapped*0.75), round(uncapped1.5),"???", cap)
 
 		else
 			user.visible_message("<span class='danger'>[user] opens \the [bomb] on \his [src.name]!</span>","<span class='danger'>You open \the [bomb] on your [src.name]!</span>")
