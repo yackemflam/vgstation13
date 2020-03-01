@@ -1,6 +1,6 @@
 /obj/item/weapon/storage/box/syndicate/New()
 	..()
-	var/tagname = pickweight(list("bloodyspai" = 100, "stealth" = 100, "screwed" = 100, "guns" = 100, "murder" = 100, "freedom" = 100, "hacker" = 100, "lordsingulo" = 100, "smoothoperator" = 100, "psycho" = 100, "hotline" = 100, "ocelot" = 100, "palpatine" = 100, "anarchist" = 50, "emagsandglue" = 10, "balloon" = 10, "bangerboy" = 100, "highlander" = 100))
+	var/tagname = pickweight(list("bloodyspai" = 100, "stealth" = 100, "screwed" = 100, "guns" = 100, "murder" = 100, "freedom" = 100, "hacker" = 100, "lordsingulo" = 100, "smoothoperator" = 100, "psycho" = 100, "hotline" = 100, "ocelot" = 100, "palpatine" = 100, "anarchist" = 50, "emagsandglue" = 10, "balloon" = 10, "bangerboy" = 100, "highlander" = 100, "sniper" = 100))
 
 	switch (tagname)
 		if("bloodyspai")//2+5+2+2+4+4+4=23
@@ -29,7 +29,7 @@
 			new /obj/item/weapon/gun/projectile(src)
 			new /obj/item/ammo_storage/box/a357(src)
 			new /obj/item/weapon/card/emag(src)
-			new /obj/item/weapon/c4(src)
+			new /obj/item/weapon/plastique(src)
 
 		if("murder")//8+6+6+2+4=26
 			new /obj/item/weapon/melee/energy/sword(src)
@@ -72,7 +72,7 @@
 			new /obj/item/weapon/soap/syndie(src)
 			new /obj/item/device/chameleon(src)
 			new /obj/item/device/encryptionkey/syndicate/hacked(src)
-			new /obj/item/weapon/c4(src)
+			new /obj/item/weapon/plastique(src)
 
 		if("psycho")//1+1+5+2+6+(fireaxe, 6?)+2=23
 			new /obj/item/clothing/suit/raincoat(src)
@@ -129,7 +129,7 @@
 			new /obj/item/clothing/suit/sith(src)
 			new /obj/item/clothing/shoes/sandal(src)
 
-		if("anarchist")//14+14+6=34, plus molotovs
+		if("anarchist")//20+6=26, plus molotovs
 			new /obj/item/weapon/implanter/traitor(src)
 			new /obj/item/weapon/implanter/traitor(src)
 			new /obj/item/clothing/mask/bandana/red(src)
@@ -164,6 +164,12 @@
 			new /obj/item/weapon/glue(src)
 			new /obj/item/weapon/vinyl/scotland(src)
 			new /obj/item/weapon/spellbook/oneuse/mutate/highlander(src)
+			
+		if("sniper")//(rifle + bullets + 4)Snipin's a good job mate
+			new/obj/item/weapon/gun/projectile/hecate(src)
+			new/obj/item/ammo_storage/box/BMG50(src)
+			new/obj/item/device/radio/headset/headset_earmuffs(src)
+			new/obj/item/clothing/glasses/thermal(src)
 
 	tag = tagname
 
@@ -273,7 +279,7 @@ obj/item/weapon/storage/box/syndie_kit/cheaptide
 	..()
 	new /obj/item/weapon/implanter/traitor(src)
 	new /obj/item/clothing/glasses/sunglasses/sechud/syndishades(src)
-
+	
 /obj/item/weapon/storage/box/syndie_kit/flaregun
 	name = "box (modified flare gun)"
 
